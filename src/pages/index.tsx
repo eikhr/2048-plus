@@ -17,8 +17,6 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <h1>2048+</h1>
-
         <div style={{ maxWidth: 600, margin: 'auto' }}>
           <NormalGame />
         </div>
