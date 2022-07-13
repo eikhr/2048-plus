@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import NormalGame from '../components/NormalGame';
 import { trpc } from '../utils/trpc';
 
 const Home: NextPage = () => {
@@ -16,36 +17,13 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <h1>
-          Create <span>T3</span> App
-        </h1>
+        <h1>2048+</h1>
 
-        <div>
-          <h3>This stack uses:</h3>
-          <ul>
-            <li>
-              <a href="https://nextjs.org" target="_blank" rel="noreferrer">
-                Next.js
-              </a>
-            </li>
-            <li>
-              <a href="https://trpc.io" target="_blank" rel="noreferrer">
-                tRPC
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://typescriptlang.org"
-                target="_blank"
-                rel="noreferrer"
-              >
-                TypeScript
-              </a>
-            </li>
-          </ul>
-
-          <div>{data ? <p>{data.greeting}</p> : <p>Loading..</p>}</div>
+        <div style={{ maxWidth: 600, margin: 'auto' }}>
+          <NormalGame />
         </div>
+
+        <div>{data ? <p>{data.greeting}</p> : <p>Loading..</p>}</div>
       </div>
     </>
   );
